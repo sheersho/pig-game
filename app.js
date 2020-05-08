@@ -192,6 +192,7 @@ btn.onclick = function() {
     
     if( document.querySelector('.dice').style.display == 'block')
         {
+            alert('Please clear the dice from the screen or Stop/Start the game to see the rules');
             return false;
         }
     else{
