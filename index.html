@@ -5,6 +5,10 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
         <title>Pig Game</title>
     </head>
@@ -29,17 +33,46 @@
                 </div>
             </div>
             
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class="sheersho"><b>SHEERSHO</b> &copy 2020</button>
             
-            <input type="text" placeholder="Final score" class="final-score">
+            <!-- Trigger/Open The Modal -->
+            <button class="rules" id="myBtn">GAME RULES</button>
             
-            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
-            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+            <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                      <p><b>GAME RULES:</b></p>
+                 
+                      <li>The game has 2 players, playing in rounds</li>
+<li>In each turn, a player rolls the die as many times as he whishes. Each result get added to his ROUND score</li>
+                      <li>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</li>
+                      <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. </li>
+                       <li>If both the Die give 6, then the GLOBAL score is set back to zero</li>
+                      <li>After that, it's back to the original player's turn</li>
+                      <li>The first player to reach 100 points on GLOBAL score wins the game</li><br>
+                      <b>BONUS : You can set the winning score according to your choice in the 'Set Score' box</b>
+                  </div>
+
+                </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>NEW GAME</button> 
+
+            <button class="btn-roll"><i class="ion-ios-loop"></i>ROLL DICE</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>HOLD</button>
+            
+            <input type="text" id="inputScore" class="finalScore" placeholder="Set Score"></input>
+          
+            </div>
+           
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+            <img src="dice-5.png" alt="Dice" class="dice1">
+            
         </div>
         
-        <!--<script src="app.js"></script>-->
-        <script src="challenges.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
